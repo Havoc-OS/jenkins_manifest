@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- General -->
+  <project path="bionic" name="android_bionic" remote="havoc" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="havoc" />
+  <project path="manifest" name="android_manifest" remote="havoc" />
+
+  <!-- Build -->
+  <project path="build/make" name="android_build" remote="havoc">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="havoc">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Device -->
+  <project path="device/generic/common" name="android_device_generic_common" remote="havoc" />
+
+  <!-- External -->
+  <project path="external/android-nn-driver" name="android_external_android-nn-driver" remote="havoc" />
+  <project path="external/armnn" name="android_external_armnn" remote="havoc" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="havoc" />
+  <project path="external/gptfdisk" name="android_external_gptfdisk" remote="havoc" />
+  <project path="external/libcxx" name="android_external_libcxx" remote="havoc" />
+  <project path="external/mksh" name="android_external_mksh" remote="havoc" />
+  <project path="external/openssh" name="android_external_openssh" remote="havoc" />
+  <project path="external/setupcompat" name="android_external_setupcompat" remote="havoc" />
+  <project path="external/tinycompress" name="android_external_tinycompress" remote="havoc" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="havoc" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="havoc" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="havoc" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="havoc" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="havoc" />
+  <project path="frameworks/opt/timezonepicker" name="android_frameworks_opt_timezonepicker" remote="havoc" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="havoc" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="havoc" />
+  <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="havoc" />
+  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="havoc" />
+  <project path="hardware/qcom/data/ipacfg-mgr" name="android_hardware_qcom_data_ipacfg-mgr" remote="havoc" />
+  <project path="hardware/qcom/sdm845/display" name="android_hardware_qcom_sdm845_display" remote="havoc" />
+  <project path="hardware/qcom/sdm845/media" name="android_hardware_qcom_sdm845_media" remote="havoc" />
+  <project path="hardware/qcom/sm7250/display" name="android_hardware_qcom_sm7250_display" remote="havoc" />
+  <project path="hardware/qcom/sm7250/media" name="android_hardware_qcom_sm7250_media" remote="havoc" />
+  <project path="hardware/qcom/sm8150/data/ipacfg-mgr" name="android_hardware_qcom_sm8150_data_ipacfg-mgr" remote="havoc">
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sm8150/Android.bp" />
+  </project>
+  <project path="hardware/qcom/sm8150/display" name="android_hardware_qcom_sm8150_display" remote="havoc" />
+  <project path="hardware/qcom/sm8150/media" name="android_hardware_qcom_sm8150_media" remote="havoc" />
+  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="havoc" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="havoc" />
+
+  <!-- Kernel -->
+  <project path="kernel/configs" name="android_kernel_configs" remote="havoc" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="havoc" />
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="havoc" />
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="havoc" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="havoc" />
+  <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="havoc" />
+  <project path="packages/apps/EmergencyInfo" name="android_packages_apps_EmergencyInfo" remote="havoc" />
+  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="havoc" />
+  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="havoc" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="havoc" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="havoc" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="havoc" />
+  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="havoc" />
+  <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="havoc" />
+  <project path="packages/modules/adb" name="android_packages_modules_adb" remote="havoc" />
+  <project path="packages/modules/common" name="android_packages_modules_common" remote="havoc" />
+  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="havoc" />
+  <project path="packages/modules/Permission" name="android_packages_modules_Permission" remote="havoc" />
+  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" remote="havoc" />
+  <project path="packages/providers/ContactsProvider" name="android_packages_providers_ContactsProvider" remote="havoc" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="havoc" />
+  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="havoc" />
+  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="havoc" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="havoc" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="havoc" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/build-tools" name="android_prebuilts_build-tools" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" remote="havoc" clone-depth="1" />
+
+  <!-- System -->
+  <project path="system/bt" name="android_system_bt" remote="havoc" />
+  <project path="system/core" name="android_system_core" remote="havoc" />
+  <project path="system/extras" name="android_system_extras" remote="havoc" />
+  <project path="system/keymaster" name="android_system_keymaster" remote="havoc" />
+  <project path="system/libhidl" name="android_system_libhidl" remote="havoc" />
+  <project path="system/libziparchive" name="android_system_libziparchive" remote="havoc" />
+  <project path="system/logging" name="android_system_logging" remote="havoc" />
+  <project path="system/media" name="android_system_media" remote="havoc" />
+  <project path="system/security" name="android_system_security" remote="havoc" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="havoc" />
+  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="havoc" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="havoc" />
+  <project path="system/vold" name="android_system_vold" remote="havoc" />
+
+</manifest>
