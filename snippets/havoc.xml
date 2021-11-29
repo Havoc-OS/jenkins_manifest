@@ -178,6 +178,7 @@
   <project path="tools/metalava" name="android_tools_metalava" remote="havoc" />
 
   <!-- Vendor -->
+  <project path="vendor/ci" name="android_vendor_ci" remote="havoc-devices" />
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="havoc" />
   <project path="vendor/gapps" name="android_vendor_gapps" remote="havoc-gitlab" />
   <project path="vendor/havoc" name="android_vendor_havoc" remote="havoc" />
