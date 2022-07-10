@@ -60,6 +60,7 @@
   <project path="prebuilts/tools-extras" name="android_prebuilts_tools-extras" remote="havoc" />
 
   <!-- Vendor -->
+  <project path="vendor/ci" name="android_vendor_ci" remote="havoc-devices" />
   <project path="vendor/gapps" name="android_vendor_gapps" remote="havoc-gitlab" />
   <project path="vendor/havoc" name="android_vendor_havoc" remote="havoc" />
   <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="havoc" />
